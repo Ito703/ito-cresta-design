@@ -1,39 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creasta Design</title>
-    <!-- Web Font -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
+<?php
+$path = realpath(dirname(__FILE__) . '') . "/";
+include $path . 'libs/meta.php';
+?>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./style/style.css">
 </head>
-
 <body class="index">
-    <header class="header">
-        <div class="header__inner">
-            <h1 class="header__logo">
-                <a href="#">
-                    <img src="../img/common/logo.svg" alt="Cresta Design">
-                </a>
-            </h1>
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="#concept">Concept</a></li>
-                    <li><a href="/works/">Works</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header__humberger sp">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+
+    <?php include $path. 'libs/header.php'; ?>
 
     <div class="wrap">
         <div class="mv">
@@ -61,7 +35,7 @@
                     <figure class="concept__contents">
                         <p>私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。</p>
                         <div class="img">
-                            <img src="../img/index/concept-image.jpg" alt="">
+                            <img src="./img/index/concept-image.jpg" alt="">
                         </div>
                     </figure>
                 </div>
@@ -80,7 +54,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <img src="../img/index/card-img01.jpg" alt="">
+                                    <img src="./img/index/card-img01.jpg" alt="">
                                 </div>
                                 <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
                             </a>
@@ -88,7 +62,7 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <img src="../img/index/card-img02.jpg" alt="">
+                                    <img src="./img/index/card-img02.jpg" alt="">
                                 </div>
                                 <p>新規サイトを公開しました。今回のサイトは白と黒を基調にした</p>
                             </a>
@@ -96,13 +70,13 @@
                         <li>
                             <a href="">
                                 <div class="img">
-                                    <img src="../img/index/card-img03.jpg" alt="">
+                                    <img src="./img/index/card-img03.jpg" alt="">
                                 </div>
                                 <p>新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。</p>
                             </a>
                         </li>
                     </ul>
-                    <a href="/works/" class="viewmore">View more</a>
+                    <a href="<?php echo APP_URL; ?>works/" class="viewmore">View more</a>
                 </div>
 
                 <div class="inner-large">
@@ -117,19 +91,19 @@
                 <ul class="service__link">
                     <li>
                         <a href="#">
-                            <div class="img"><img src="../img/index/service-img01.jpg" alt=""></div>
+                            <div class="img"><img src="./img/index/service-img01.jpg" alt=""></div>
                             <span class="title">Hearing</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="img"><img src="../img/index/service-img02.jpg" alt=""></div>
+                            <div class="img"><img src="./img/index/service-img02.jpg" alt=""></div>
                             <span class="title">Planning</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <div class="img"><img src="../img/index/service-img03.jpg" alt=""></div>
+                            <div class="img"><img src="./img/index/service-img03.jpg" alt=""></div>
                             <span class="title">Direction</span>
                         </a>
                     </li>
@@ -155,12 +129,9 @@
         </main>
     </div>
 
-    <footer class="footer">
-        <small><span lang="en">©︎</span>cresta.design all rights reserved</small>
-    </footer>
+    <?php include $path. 'libs/footer.php'; ?>
+    <?php include $path. 'libs/script.php'; ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="./js/common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
     <script>

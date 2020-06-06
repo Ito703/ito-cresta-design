@@ -1,41 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creasta Design</title>
-    <!-- Web Font -->
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="../style/style.css">
+<?php
+$path = realpath(dirname(__FILE__) . '') . "/../";
+include $path . 'libs/meta.php';
+?>
 </head>
 
 <body class="works">
-    <header class="header">
-        <div class="header__inner">
-            <h1 class="header__logo">
-                <a href="#">
-                    <img src="../img/common/logo.svg" alt="Cresta Design">
-                </a>
-            </h1>
-            <nav class="header__nav">
-                <ul>
-                    <li><a href="#concept">Concept</a></li>
-                    <li><a href="#works">Works</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header__humberger sp">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+    <?php include $path. 'libs/header.php'; ?>
 
     <div class="wrap">
         <div class="sub-mv">
@@ -80,24 +50,7 @@
                     <p>テキストはダミーです。月の重力は地球と比べてはるかに小さいが、それでも外気圏と呼ばれるごく薄い大気の層が存在する。テキストはダミーです。月の重力は地球と比べてはるかに小さいが、それでも外気圏と呼ばれるごく薄い大気の層が存在する。</p>
                 </article>
 
-                <aside>
-                    <div class="article-nav">
-                        <h4 class="article-nav__title">Archive</h4>
-                        <ul>
-                            <li><a href="#">2019/08</a></li>
-                            <li><a href="#">2019/07</a></li>
-                            <li><a href="#">2019/06</a></li>
-                        </ul>
-                    </div>
-                    <div class="article-nav">
-                        <h4 class="article-nav__title">Category</h4>
-                        <ul>
-                            <li><a href="#">ニュース</a></li>
-                            <li><a href="#">イベント</a></li>
-                            <li><a href="#">その他</a></li>
-                        </ul>
-                    </div>
-                </aside>
+                <?php include $path. 'libs/sidebar.php'; ?>
             </div>
 
             <div class="back-btn"><a href="../works">一覧へ</a></div>
@@ -105,12 +58,8 @@
 
     </div>
 
-    <footer class="footer">
-        <small><span lang="en">©︎</span>cresta.design all rights reserved</small>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="../js/common.js"></script>
+    <?php include $path. 'libs/footer.php'; ?>
+    <?php include $path. 'libs/script.php'; ?>
 
 </body>
 </html>
