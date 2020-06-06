@@ -1,0 +1,36 @@
+.sec-title{
+    font-size: 6.0rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    font-style: italic;
+    position: relative;
+
+    @media screen and (max-width: 767px) {
+        font-size: 3.0rem;
+    }
+
+    &:after{
+        content: '';
+        width: 200px;
+        height: 5px;
+        background-color: $black;
+        display: inline-block;
+        position: relative;
+        bottom: 20px;
+        margin-left: 30px;
+        @media screen and (max-width: 767px) {
+            width: 90px;
+            margin-left: 25px;
+            bottom: 8px;
+        }
+    }
+
+    &.white{
+        color: white;
+        text-align: right;
+        &:after{
+            background-color: #FFF;
+        }
+    }
+}

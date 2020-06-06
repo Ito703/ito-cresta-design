@@ -1,0 +1,19 @@
+.viewmore{
+    background-color: $yellow;
+    display: block;
+    width: 235px;
+    height: 59px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border-radius: 59px;
+    padding-top: 18px;
+    border: $yellow solid 4px;
+    transition: all .3s;
+
+    &:hover{
+        background-color:#FFF
+    }
+}

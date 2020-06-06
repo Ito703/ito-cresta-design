@@ -1,0 +1,270 @@
+body.index{
+    .mv {
+        height: 100vh;
+        width: 100%;
+        position: relative;
+
+        h2{
+            position: absolute;
+            left: 120px;
+            top: 54%;
+            z-index: 2;
+            text-align: center;
+
+            @media screen and (max-width: 767px) {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            span{
+                color: #FFF;
+                font-weight: bold;
+                letter-spacing: 0.05em;
+                display: block;
+
+                &:nth-child(1){
+                    font-size: 7rem;
+                    @media screen and (max-width: 767px) {
+                        font-size: 3.7rem;
+                        white-space: nowrap;
+                    }
+                }
+                &:nth-child(2){
+                    font-size: 4rem;
+                    margin-top: 30px;
+                    @media screen and (max-width: 767px) {
+                        font-size: 3rem;
+                        line-height: 1.666666667em;
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+        .slider{
+            width: 100%;
+            height: 100%;
+            display: none;
+
+            &.slick-initialized{
+                display: block; /*slick-initializedが付与されたら表示*/
+            }
+            * {
+                height: 100%;
+            }
+            .slide{
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+    }
+
+    section{
+        padding: 100px 0 70px;
+
+        @media screen and (max-width: 767px) {
+            padding: 100px 0 40px;
+        }
+
+        .sec-title{
+            margin-bottom: 80px;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .bg-text{
+            font-size: 9.0rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            padding-top: 70px;
+            color: rgba(#FFF, .05);
+
+            @media screen and (max-width: 767px) {
+                font-size: 4.0rem;
+                padding-top: 40px;
+            }
+        }
+
+        &:nth-child(2n + 1){
+
+            .bg-text{
+                color: rgba(#171717, .05);
+                text-align: right;
+            }
+        }
+    }
+
+    .concept{
+        padding-bottom: 80px;
+        @media screen and (max-width: 767px) {
+            padding-bottom: 40px;
+        }
+
+        .sec-title{
+            margin-bottom: 70px;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__heading{
+            font-size: 3.0rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            text-align: center;
+            margin-bottom: 60px;
+
+            @media screen and (max-width: 767px) {
+                font-size: 2.0rem;
+                line-height: 1.5;
+                margin-bottom: 30px;
+            }
+        }
+
+        &__contents{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media screen and (max-width: 767px) {
+                display: block;
+            }
+
+            p{
+                padding-right: 120px;
+                @media screen and (max-width: 767px) {
+                    padding-right: 0;
+                }
+            }
+            .img{
+                max-width: 440px;
+                width: 100%;
+                flex-shrink: 0;
+
+                @media screen and (max-width: 767px) {
+                    max-width: inherit;
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+
+    .works {
+        background-image: url(../img/index/works-bgi.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media screen and (max-width: 767px) {
+            background-image: url(../img/index/works-bgi-sp.jpg);
+        }
+
+        .viewmore{
+            margin-top: 80px;
+        }
+    }
+
+    .service{
+        @media screen and (max-width: 767px) {
+            padding-bottom: 65px;
+        }
+
+        &__link{
+            &:after{
+                content: '';
+                clear: both;
+                display: block;;
+            }
+            @media screen and (max-width: 767px) {
+                margin-top: 80px;
+            }
+
+            > li{
+                float: left;
+                width: calc(100% / 3);
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    margin-top: 30px;
+
+                    &:nth-child(-n + 1){
+                        margin-top: 0;
+                    }
+                }
+
+                a{
+                    display: block;
+                    height: 100%;
+                    position: relative;
+
+                    &:hover .img:before{
+                        opacity: 1;
+                    }
+                    .img{
+                        position: relative;
+
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: rgba($black, .7);
+                            z-index: 2;
+                            opacity: 0;
+                            transition: opacity .3s;
+                        }
+                    }
+                    .title{
+                        font-size: 4.0rem;
+                        color: #FFF;
+                        letter-spacing: 0.05em;
+                        font-weight: bold;
+                        font-style: italic;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 3;
+
+                        @media screen and (max-width: 767px) {
+                            font-size: 2.0rem;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .contact{
+        background-image: url(../img/index/contact-bgi.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &__heading{
+            font-size: 2.0rem;
+            color: #FFF;
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                margin-top: 80px;
+            }
+        }
+        .viewmore{
+            margin-top: 40px;
+            @media screen and (max-width: 767px) {
+                margin-top: 30px;
+            }
+        }
+
+        .bg-text{
+            padding-top: 120px;
+            @media screen and (max-width: 767px) {
+                padding-top: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+// Font
+// ---------------------------------------------------------------------------
+$NotoSerif :  'Noto Serif', 'Noto Serif JP',  sans-serif;
+$gothic: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$rubik: 'Rubik', sans-serif;
+$roboto-condensed: 'Roboto Condensed', sans-serif;
+
+// Color
+// ---------------------------------------------------------------------------
+$black : #282F35;
+$yellow : #F7D43F;
+
+// Base
+// ---------------------------------------------------------------------------
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+    color: $black;
+    font-family: $NotoSerif;
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+p {
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    line-height: 1.875;
+}
+
+.inner {
+	max-width: 1040px;
+	padding:0 20px;
+	width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 767px) {
+        max-width: inherit;
+        padding: 0 15px;
+    }
+}
+
+.inner-large {
+	max-width: 1240px;
+	padding:0 20px;
+	width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 767px) {
+        max-width: inherit;
+        padding: 0 15px;
+    }
+}
+
+.sp {
+    @media screen and (max-width: 767px) {
+        display:block !important;
+    }
+    @media screen and (min-width: 768px) {
+        display: none !important;
+    }
+}
+
+.pc {
+    @media screen and (max-width: 767px) {
+        display: none !important;
+    }
+    @media screen and (min-width: 768px) {
+        display: block !important;
+    }
+}
+
+
+@mixin hover{
+    transition: all .3s;
+    &:hover{
+        opacity: .7;
+    }
+}

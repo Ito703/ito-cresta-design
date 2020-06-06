@@ -1,0 +1,64 @@
+.pagination {
+    width: 100%;
+    background-color: #F2F2F2;
+    padding: 47px 0 42px;
+
+    .wp-pagenavi {
+		display: flex;
+		align-items: center;
+        justify-content: center;
+    }
+
+    a{
+        @include hover;
+    }
+
+	.page, .current {
+        font-size: 1.6rem;
+        font-weight: bold;
+        font-family: $roboto-condensed;
+        margin: 0 10px;
+
+		&.no-display {
+			visibility: none;
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+
+	.current {
+	}
+
+    .nextpostslink,
+    .previouspostslink {
+        font-size: 1.4rem;
+        color: #FFF;
+        font-style: italic;
+        width: 78px;
+        height: 30px;
+        background-color: #282F35;
+        text-align: center;
+        padding-top: 8px;
+        margin: 0 20px;
+        position: relative;
+    }
+
+    .previouspostslink:before, .nextpostslink:after{
+        content: '';
+        width: 7px;
+        height: 8px;
+        background-image: url(../img/common/icon-arrow-white.svg);
+        background-repeat: no-repeat;
+        background-size: 7px 8px;
+        background-position: center;
+        display: inline-block;
+        position: relative;
+        top: -1px;
+        margin-right: 8px;
+    }
+
+    .nextpostslink:after{
+        transform: rotate(180deg);
+        margin: 0 0 0 8px;
+    }
+}
