@@ -900,14 +900,13 @@ body.index .contact .bg-text {
 
 .pagination .nextpostslink,
 .pagination .previouspostslink {
-  font-size: 1.4rem;
+  font-size: 0;
   color: #FFF;
   font-style: italic;
   width: 78px;
   height: 30px;
   background-color: #282F35;
   text-align: center;
-  padding-top: 8px;
   margin: 0 20px;
   position: relative;
 }
@@ -921,15 +920,16 @@ body.index .contact .bg-text {
   background-size: 7px 8px;
   background-position: center;
   display: inline-block;
-  position: relative;
-  top: -1px;
-  margin-right: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .pagination .nextpostslink:after {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  margin: 0 0 0 8px;
+  -webkit-transform: translate(-50%, -50%) rotate(180deg);
+          transform: translate(-50%, -50%) rotate(180deg);
 }
 
 .breadcrumb {

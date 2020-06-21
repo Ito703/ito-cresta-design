@@ -2,17 +2,24 @@
     <div class="article-nav">
         <h4 class="article-nav__title">Archive</h4>
         <ul>
-            <li><a href="#">2019/08</a></li>
-            <li><a href="#">2019/07</a></li>
-            <li><a href="#">2019/06</a></li>
+            <?php wp_get_archives('type=monthly&post_type=works'); ?>
         </ul>
     </div>
     <div class="article-nav">
         <h4 class="article-nav__title">Category</h4>
         <ul>
-            <li><a href="#">ニュース</a></li>
-            <li><a href="#">イベント</a></li>
-            <li><a href="#">その他</a></li>
+        <?php
+            $terms = get_terms(
+                'workscat',
+                array(
+                    'hide_empty' => false,
+                )
+            );
+            foreach ($terms as $key => $term) {
+            $link = get_term_link($term);
+            echo '<li><a href="'.$link.'">'.$term->name.'</a></li>';
+            }
+        ?>
         </ul>
     </div>
 </aside>
